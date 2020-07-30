@@ -1,1 +1,3 @@
-# grid-layout-example
+# Grid Layout Examples
+
+Practice building grid layoutss
