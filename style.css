@@ -1,1 +1,67 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: skyblue;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px 1fr 50px;
+      grid-template-rows: 100px 1fr 50px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "header" "content" "footer";
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    -ms-grid-columns: 1fr 300px;
+        grid-template-columns: 1fr 300px;
+        grid-template-areas: "header header" "content sidebar" "footer footer";
+  }
+}
+
+body > header {
+  background-color: rgba(0, 0, 0, 0.2);
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main {
+  background-color: rgba(255, 255, 255, 0.2);
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
+}
+
+body > aside {
+  display: none;
+  grid-area: sidebar;
+}
+
+@media only screen and (min-width: 600px) {
+  body > aside {
+    display: block;
+  }
+}
+
+body > footer {
+  background-color: rgba(0, 0, 128, 0.5);
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+/*# sourceMappingURL=style.css.map */
