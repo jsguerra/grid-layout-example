@@ -18,10 +18,10 @@ body {
   "footer";
 
   @media only screen and (min-width: 600px) {
-    grid-template-columns: 1fr 300px;
-    grid-template-areas: "header header"
-    "content sidebar"
-    "footer footer";
+    grid-template-columns: 10% 1fr 300px 10%;
+    grid-template-areas: "header header header header"
+    ". content sidebar ."
+    "footer footer footer footer";
   }
 
   // define grid areas
@@ -30,11 +30,13 @@ body {
     grid-area: header;
     display: flex;
     justify-content: space-between;
+    padding: 0 10%;
   }
 
   main {
     background-color: rgba(white, 0.2);
     grid-area: content;
+    padding: 40px;
   }
 
   > aside {
@@ -43,11 +45,13 @@ body {
 
     @media only screen and (min-width: 600px) {
       display: block;
+      padding: 40px;
     }
   }
 
   > footer {
     background-color: rgba(navy, 0.5);
     grid-area: footer;
+    text-align: center;
   }
 }
